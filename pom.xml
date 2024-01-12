@@ -52,11 +52,6 @@
       <id>aikar</id>
       <url>https://repo.aikar.co/content/groups/aikar/</url>
     </repository>
-
-    <repository>
-      <id>viaversion-repo</id>
-      <url>https://repo.viaversion.com</url>
-    </repository>
   </repositories>
 
   <dependencies>
@@ -81,14 +76,6 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.28</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <!-- ViaVersion Dependency -->
-    <dependency>
-      <groupId>com.viaversion</groupId>
-      <artifactId>viaversion-api</artifactId>
-      <version>4.9.3-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
 
