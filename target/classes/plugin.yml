@@ -1,0 +1,3 @@
+name: lBridge
+version: '${project.version}'
+main: dev.acentra.lbridge.lbridge.LBridge
