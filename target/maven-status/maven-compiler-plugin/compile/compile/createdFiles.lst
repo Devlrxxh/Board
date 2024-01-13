@@ -1,7 +1,9 @@
+dev\acentra\arena\Arena$ArenaBuilder.class
 dev\acentra\config\ConfigManager.class
 dev\acentra\lBridge.class
 dev\acentra\arena\Arena.class
 dev\acentra\config\Config.class
 dev\acentra\arena\ArenaManager.class
+dev\acentra\arena\command\ArenaCommand.class
 dev\acentra\utils\CC.class
 dev\acentra\utils\LocationUtil.class

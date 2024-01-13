@@ -10,6 +10,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Collections;
 
 
 @Getter
@@ -20,7 +21,7 @@ public class ConfigManager {
     private File arena;
 
     public void loadConfigs() {
-        Arrays.asList(
+        Collections.singletonList(
                 new Config(arena, arenaConfig, "saves/arenas.yml")
         ).forEach(config -> loadConfig(config));
     }

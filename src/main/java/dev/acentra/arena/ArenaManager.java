@@ -22,6 +22,14 @@ public class ArenaManager {
         loadArenas();
     }
 
+    public Arena getArena(String arenaName) {
+        for (Arena arena : getArenas()) {
+            if (arena.getName().equals(arenaName))
+                return arena;
+        }
+        return null;
+    }
+
     public void loadArenas() {
         if (arenaConfig.getConfigurationSection("arenas") == null || arenaConfig.get("arenas") == null)
             return;
