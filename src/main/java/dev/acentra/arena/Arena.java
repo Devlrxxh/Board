@@ -2,14 +2,8 @@ package dev.acentra.arena;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 import org.bukkit.Location;
 
-/**
- * @author lrxh
- * @project MusikPlayer
- * @since 1/12/2024
- */
 @Getter
 @AllArgsConstructor
 public class Arena {
@@ -21,6 +15,8 @@ public class Arena {
     private Location redSpawnMax;
     private Location blueSpawnMin;
     private Location blueSpawnMax;
+    private Location min;
+    private Location max;
     private double builtLimit;
     private double deathZone;
     private boolean active;
