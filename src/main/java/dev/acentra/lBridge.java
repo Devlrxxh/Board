@@ -40,11 +40,13 @@ public final class lBridge extends JavaPlugin {
     }
 
     private void loadManagers() {
-        arenaManager = new ArenaManager();
         loadCommandManager();
 
         configManager = new ConfigManager();
         getConfigManager().loadConfigs();
+
+        arenaManager = new ArenaManager();
+        getArenaManager().loadArenas();
     }
 
     private void loadCommandManager() {

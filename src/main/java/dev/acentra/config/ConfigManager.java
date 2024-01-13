@@ -1,6 +1,8 @@
 package dev.acentra.config;
 
 import dev.acentra.lBridge;
+import lombok.Getter;
+import lombok.Setter;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -8,13 +10,14 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Collections;
 
 
+@Getter
+@Setter
 public class ConfigManager {
     private final lBridge plugin = lBridge.getInstance();
+    public FileConfiguration arenaConfig;
     private File arena;
-    private FileConfiguration arenaConfig;
 
     public void loadConfigs() {
         Arrays.asList(
@@ -26,8 +29,8 @@ public class ConfigManager {
     private void loadConfig(Config config) {
         saveResourceIfNotExists(config.getFileLocation());
         File configFile = new File(plugin.getDataFolder(), config.getFileLocation());
-        config.setFile(configFile);
-        config.setFileConfiguration(YamlConfiguration.loadConfiguration(configFile));
+        setArena(configFile);
+        setArenaConfig(YamlConfiguration.loadConfiguration(configFile));
     }
 
 
