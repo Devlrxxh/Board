@@ -79,10 +79,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("remove")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void remove(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArenas().remove(getArenaManager().getArena(arena));
@@ -96,10 +97,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setDisplay")
+    @CommandCompletion("@arenas")
     @Syntax("<arena> <value>")
     private void setDisplay(Player player, String arena, String value) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setDisplayName(value);
@@ -107,10 +109,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setRedSpawn")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void setRedSpawn(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setRedSpawn(player.getLocation());
@@ -118,10 +121,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setBlueSpawn")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void setBlueSpawn(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setBlueSpawn(player.getLocation());
@@ -129,10 +133,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setRedSpawnMin")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void setRedSpawnMin(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setRedSpawnMin(player.getLocation());
@@ -140,10 +145,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setRedSpawnMax")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void setRedSpawnMax(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setRedSpawnMax(player.getLocation());
@@ -151,10 +157,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setBlueSpawnMin")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void setBlueSpawnMin(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setBlueSpawnMin(player.getLocation());
@@ -162,10 +169,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setBlueSpawnMax")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void setBlueSpawnMax(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setBlueSpawnMax(player.getLocation());
@@ -173,10 +181,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setMin")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void setMin(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setMin(player.getLocation());
@@ -184,10 +193,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setMax")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void setMax(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setMax(player.getLocation());
@@ -195,10 +205,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setBuiltLimit")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void setBuiltLimit(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setBuiltLimit(player.getLocation().getY());
@@ -206,10 +217,11 @@ public class ArenaCommand extends BaseCommand {
     }
 
     @Subcommand("setDeathZone")
+    @CommandCompletion("@arenas")
     @Syntax("<arena>")
     private void setDeathZone(Player player, String arena) {
         if (!checkArena(arena)) {
-            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exists!"));
+            player.sendMessage(CC.translate("&4ERROR &8| &cArena doesn't exist!"));
             return;
         }
         getArenaManager().getArena(arena).setDeathZone(player.getLocation().getY());

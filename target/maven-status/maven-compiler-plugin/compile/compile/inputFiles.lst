@@ -1,8 +1,11 @@
 D:\lBridge\src\main\java\dev\acentra\config\Config.java
+D:\lBridge\src\main\java\dev\acentra\queue\QueueManager.java
 D:\lBridge\src\main\java\dev\acentra\utils\CC.java
 D:\lBridge\src\main\java\dev\acentra\arena\command\ArenaCommand.java
 D:\lBridge\src\main\java\dev\acentra\arena\Arena.java
 D:\lBridge\src\main\java\dev\acentra\utils\LocationUtil.java
+D:\lBridge\src\main\java\dev\acentra\queue\QueueEntry.java
 D:\lBridge\src\main\java\dev\acentra\lBridge.java
 D:\lBridge\src\main\java\dev\acentra\config\ConfigManager.java
 D:\lBridge\src\main\java\dev\acentra\arena\ArenaManager.java
+D:\lBridge\src\main\java\dev\acentra\manager\ThreadsManager.java
