@@ -29,7 +29,7 @@ public class ExamplePlugin implements JavaPlugin {
 
 #### Board Adapter
 ```java
-public class ScoreboardProvider implements BoardAdapter {
+public class ExampleScoreBoardAdapter implements BoardAdapter {
     @Override
     public String getTitle(Player player) {
         return "&7Title";
