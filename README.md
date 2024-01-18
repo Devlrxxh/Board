@@ -21,7 +21,7 @@ public class ExamplePlugin implements JavaPlugin {
 
     @Override
     public void onEnable() {
-        new Board(getInstance(), new ExampleScoreBoardAdapter());
+        new Board(this, new ExampleScoreBoardAdapter());
     }
 
 }
