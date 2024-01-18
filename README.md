@@ -15,7 +15,7 @@
 
 ## Code Examples
 
-#### Setup
+#### Board Setup
 ```java
 public class ExamplePlugin implements JavaPlugin {
 
@@ -27,7 +27,7 @@ public class ExamplePlugin implements JavaPlugin {
 }
 ```
 
-#### Adapter
+#### Board Adapter
 ```java
 public class ScoreboardProvider implements BoardAdapter {
     @Override
