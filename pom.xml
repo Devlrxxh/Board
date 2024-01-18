@@ -2,42 +2,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <groupId>dev.acentra.lBridge</groupId>
-  <artifactId>lBridge</artifactId>
-  <version>1.0-BETA</version>
+  <groupId>o.lrxxh.board.Board</groupId>
+  <artifactId>Board</artifactId>
+  <version>1.0</version>
   <packaging>jar</packaging>
   <modelVersion>4.0.0</modelVersion>
-  <name>lBridge</name>
+  <name>Board</name>
 
   <build>
     <defaultGoal>clean install</defaultGoal>
     <plugins>
       <!-- Maven Compiler Plugin -->
-
-      <!-- Maven Shade Plugin -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.5.0</version>
-        <configuration>
-          <createDependencyReducedPom>false</createDependencyReducedPom>
-          <shadedArtifactAttached>false</shadedArtifactAttached>
-          <relocations>
-            <relocation>
-              <pattern>co.aikar.commands</pattern>
-              <shadedPattern>dev.acentra.acf</shadedPattern>
-            </relocation>
-          </relocations>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -71,28 +46,19 @@
   </build>
 
   <repositories>
-    <!-- Aikar Repository -->
     <repository>
-      <id>aikar</id>
-      <url>https://repo.aikar.co/content/groups/aikar/</url>
+      <id>spigot-repo</id>
+      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
   </repositories>
 
   <dependencies>
-    <!-- ACF Paper Dependency -->
-    <dependency>
-      <groupId>co.aikar</groupId>
-      <artifactId>acf-paper</artifactId>
-      <version>0.5.1-SNAPSHOT</version>
-    </dependency>
-
     <!-- Spigot Dependency -->
     <dependency>
-      <groupId>org.papermc</groupId>
-      <artifactId>spigot</artifactId>
+      <groupId>org.spigotmc</groupId>
+      <artifactId>spigot-api</artifactId>
       <version>1.8.8-R0.1-SNAPSHOT</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/libs/PaperSpigot-1.8.8-R0.1-SNAPSHOT.jar</systemPath>
+      <scope>provided</scope>
     </dependency>
 
     <!-- Lombok Dependency -->
@@ -101,13 +67,6 @@
       <artifactId>lombok</artifactId>
       <version>1.18.28</version>
       <scope>provided</scope>
-    </dependency>
-
-    <!-- MongoDB Database -->
-    <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongodb-driver-sync</artifactId>
-      <version>4.11.1</version>
     </dependency>
   </dependencies>
 </project>

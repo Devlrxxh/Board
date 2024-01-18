@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/lBridge.iml" filepath="$PROJECT_DIR$/lBridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Board.iml" filepath="$PROJECT_DIR$/Board.iml" />
     </modules>
   </component>
 </project>
