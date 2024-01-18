@@ -26,3 +26,28 @@ public class ExamplePlugin implements JavaPlugin {
 
 }
 ```
+
+#### Adapter
+```java
+public class ScoreboardProvider implements BoardAdapter {
+    @Override
+    public String getTitle(Player player) {
+        return "&7Title";
+    }
+
+    @Override
+    public List<String> getLines(Player player) {
+        final List<String> toReturn = new ArrayList<>();
+
+        toReturn.add("&a&lLine 1!");
+        toReturn.add("&c&lLine 2!");
+        toReturn.add("&9&lLine 3!");
+
+        return toReturn;
+    }
+
+    @Override
+    public Long getDelay() {
+        return 2L;
+    }
+```
