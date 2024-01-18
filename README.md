@@ -13,4 +13,16 @@
 * Supports up to 40 characters per line
 * Change the scoreboard size easily by using a list of strings – no need to add or remove lines one by one.
 
-## Installation
+## Code Examples
+
+#### Setup
+```java
+public class ExamplePlugin implements JavaPlugin {
+
+    @Override
+    public void onEnable() {
+        new Board(getInstance(), new ExampleScoreBoardAdapter());
+    }
+
+}
+```
