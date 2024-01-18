@@ -23,7 +23,7 @@ public class BoardScoreboard {
     public BoardScoreboard(Player player, String title, JavaPlugin plugin) {
         this.player = player;
         this.plugin = plugin;
-        runAsync(() -> createScoreboard(title));
+        runSync(() -> createScoreboard(title));
     }
 
     private void createScoreboard(String title) {
@@ -37,7 +37,7 @@ public class BoardScoreboard {
         if (isLinesDifferent(lines)) {
             lastLines.clear();
             lastLines.addAll(lines);
-            runAsync(() -> updateScoreboardLines(lines));
+            runSync(() -> updateScoreboardLines(lines));
         }
     }
 
@@ -76,14 +76,14 @@ public class BoardScoreboard {
     }
 
     public void display() {
-        runAsync(() -> {
+        runSync(() -> {
             if (scoreboard != null) {
                 player.setScoreboard(scoreboard);
             }
         });
     }
 
-    private void runAsync(Runnable task) {
+    private void runSync(Runnable task) {
         if (Bukkit.isPrimaryThread()) {
             task.run();
         } else {
